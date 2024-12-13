@@ -2,13 +2,7 @@ import { Card, Heading } from '@chakra-ui/react'
 import { AI } from 'ai-props'
 import { headers } from 'next/headers'
 import { z } from 'zod'
-
-export const Item: React.FC<{ activity?: string; description?: string }> = ({ activity, description }) => (
-  <div>
-    <h2>{activity}</h2>
-    <p>{description}</p>
-  </div>
-)
+import { Item } from '../components/Item'
 
 export default async function Page(): Promise<React.JSX.Element> {
   // const { city, country } = geolocation()
