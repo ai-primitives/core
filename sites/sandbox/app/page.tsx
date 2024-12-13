@@ -2,15 +2,9 @@ import { Card, Heading } from '@chakra-ui/react'
 import { AI } from 'ai-props'
 import { headers } from 'next/headers'
 import { z } from 'zod'
+import { Item } from '../components/Item'
 
-export const Item = ({ activity, description }: { activity?: string; description?: string }) => (
-  <div>
-    <h2>{activity}</h2>
-    <p>{description}</p>
-  </div>
-)
-
-export default async function Page() {
+export default async function Page(): Promise<React.JSX.Element> {
   // const { city, country } = geolocation()
   const currentHeaders = await headers()
   const city = currentHeaders.get('X-Vercel-IP-City') || 'San Francisco'
