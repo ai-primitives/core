@@ -8,7 +8,7 @@ interface ButtonProps {
   appName: string
 }
 
-export const Button: React.FC<ButtonProps> = ({ children, className, appName }) => {
+export const Button = ({ children, className, appName }: ButtonProps): React.ReactElement => {
   return (
     <button className={className} onClick={() => alert(`Hello from your ${appName} app!`)}>
       {children}
