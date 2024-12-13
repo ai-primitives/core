@@ -7,6 +7,13 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@ai-sdk/openai':
+        specifier: 1.0.6
+        version: 1.0.6(zod@3.23.8)
+      ai:
+        specifier: 4.0.11
+        version: 4.0.11(react@19.0.0)(zod@3.23.8)
     devDependencies:
       prettier:
         specifier: ^3.2.5
@@ -15,8 +22,8 @@ importers:
         specifier: ^2.3.3
         version: 2.3.3
       typescript:
-        specifier: 5.5.4
-        version: 5.5.4
+        specifier: 5.3.3
+        version: 5.3.3
 
   packages/ai-database:
     dependencies:
@@ -148,6 +155,9 @@ importers:
       json-schema-to-ts:
         specifier: ^3.1.1
         version: 3.1.1
+      json-schema-to-typescript:
+        specifier: ^15.0.3
+        version: 15.0.3
       react:
         specifier: link:@types/testing-library/react
         version: link:@types/testing-library/react
@@ -159,16 +169,16 @@ importers:
         version: 5.0.0
       ts-node:
         specifier: ^10.9.2
-        version: 10.9.2(@types/node@20.17.9)(typescript@5.5.4)
+        version: 10.9.2(@types/node@20.17.9)(typescript@5.3.3)
       typescript:
-        specifier: 5.5.4
-        version: 5.5.4
+        specifier: 5.3.3
+        version: 5.3.3
       vite:
         specifier: ^6.0.3
         version: 6.0.3(@types/node@20.17.9)(jiti@1.21.6)(terser@5.37.0)(tsx@4.19.2)(yaml@2.6.1)
       vite-plugin-dts:
         specifier: ^4.3.0
-        version: 4.3.0(@types/node@20.17.9)(rollup@4.28.0)(typescript@5.5.4)(vite@6.0.3(@types/node@20.17.9)(jiti@1.21.6)(terser@5.37.0)(tsx@4.19.2)(yaml@2.6.1))
+        version: 4.3.0(@types/node@20.17.9)(rollup@4.28.0)(typescript@5.3.3)(vite@6.0.3(@types/node@20.17.9)(jiti@1.21.6)(terser@5.37.0)(tsx@4.19.2)(yaml@2.6.1))
       vitest:
         specifier: ^2.1.8
         version: 2.1.8(@types/node@20.17.9)(jsdom@25.0.1)(terser@5.37.0)
@@ -226,8 +236,8 @@ importers:
         specifier: workspace:*
         version: link:../../utilities/typescript-config
       typescript:
-        specifier: 5.5.4
-        version: 5.5.4
+        specifier: 5.3.3
+        version: 5.3.3
 
   packages/db.mdx:
     dependencies:
@@ -6501,6 +6511,11 @@ packages:
       typescript:
         optional: true
 
+  typescript@5.3.3:
+    resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
   typescript@5.4.2:
     resolution: {integrity: sha512-+2/g0Fds1ERlP6JsakQQDXjZdZMM+rqpamFZJEKh4kwTIn3iDkgKtby0CeNd5ATNZ4Ry1ax15TMx0W2V+miizQ==}
     engines: {node: '>=14.17'}
@@ -7001,6 +7016,16 @@ snapshots:
   '@ai-sdk/provider@1.0.1':
     dependencies:
       json-schema: 0.4.0
+
+  '@ai-sdk/react@1.0.4(react@19.0.0)(zod@3.23.8)':
+    dependencies:
+      '@ai-sdk/provider-utils': 2.0.2(zod@3.23.8)
+      '@ai-sdk/ui-utils': 1.0.3(zod@3.23.8)
+      swr: 2.2.5(react@19.0.0)
+      throttleit: 2.1.0
+    optionalDependencies:
+      react: 19.0.0
+      zod: 3.23.8
 
   '@ai-sdk/react@1.0.4(react@19.0.0-rc-66855b96-20241106)(zod@3.23.8)':
     dependencies:
@@ -9008,7 +9033,7 @@ snapshots:
       de-indent: 1.0.2
       he: 1.2.0
 
-  '@vue/language-core@2.1.6(typescript@5.5.4)':
+  '@vue/language-core@2.1.6(typescript@5.3.3)':
     dependencies:
       '@volar/language-core': 2.4.10
       '@vue/compiler-dom': 3.5.13
@@ -9019,7 +9044,7 @@ snapshots:
       muggle-string: 0.4.1
       path-browserify: 1.0.1
     optionalDependencies:
-      typescript: 5.5.4
+      typescript: 5.3.3
 
   '@vue/shared@3.5.13': {}
 
@@ -9627,6 +9652,19 @@ snapshots:
     dependencies:
       clean-stack: 2.2.0
       indent-string: 4.0.0
+
+  ai@4.0.11(react@19.0.0)(zod@3.23.8):
+    dependencies:
+      '@ai-sdk/provider': 1.0.1
+      '@ai-sdk/provider-utils': 2.0.2(zod@3.23.8)
+      '@ai-sdk/react': 1.0.4(react@19.0.0)(zod@3.23.8)
+      '@ai-sdk/ui-utils': 1.0.3(zod@3.23.8)
+      '@opentelemetry/api': 1.9.0
+      jsondiffpatch: 0.6.0
+      zod-to-json-schema: 3.23.5(zod@3.23.8)
+    optionalDependencies:
+      react: 19.0.0
+      zod: 3.23.8
 
   ai@4.0.11(react@19.0.0-rc-66855b96-20241106)(zod@3.23.8):
     dependencies:
@@ -13883,6 +13921,12 @@ snapshots:
       lower-case: 1.1.4
       upper-case: 1.1.3
 
+  swr@2.2.5(react@19.0.0):
+    dependencies:
+      client-only: 0.0.1
+      react: 19.0.0
+      use-sync-external-store: 1.2.2(react@19.0.0)
+
   swr@2.2.5(react@19.0.0-rc-66855b96-20241106):
     dependencies:
       client-only: 0.0.1
@@ -14089,6 +14133,24 @@ snapshots:
 
   ts-interface-checker@0.1.13: {}
 
+  ts-node@10.9.2(@types/node@20.17.9)(typescript@5.3.3):
+    dependencies:
+      '@cspotcode/source-map-support': 0.8.1
+      '@tsconfig/node10': 1.0.11
+      '@tsconfig/node12': 1.0.11
+      '@tsconfig/node14': 1.0.3
+      '@tsconfig/node16': 1.0.4
+      '@types/node': 20.17.9
+      acorn: 8.14.0
+      acorn-walk: 8.3.4
+      arg: 4.1.3
+      create-require: 1.1.1
+      diff: 4.0.2
+      make-error: 1.3.6
+      typescript: 5.3.3
+      v8-compile-cache-lib: 3.0.1
+      yn: 3.1.1
+
   ts-node@10.9.2(@types/node@20.17.9)(typescript@5.5.4):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
@@ -14210,6 +14272,8 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  typescript@5.3.3: {}
+
   typescript@5.4.2: {}
 
   typescript@5.5.4: {}
@@ -14327,6 +14391,10 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
+  use-sync-external-store@1.2.2(react@19.0.0):
+    dependencies:
+      react: 19.0.0
+
   use-sync-external-store@1.2.2(react@19.0.0-rc-66855b96-20241106):
     dependencies:
       react: 19.0.0-rc-66855b96-20241106
@@ -14389,18 +14457,18 @@ snapshots:
       - supports-color
       - terser
 
-  vite-plugin-dts@4.3.0(@types/node@20.17.9)(rollup@4.28.0)(typescript@5.5.4)(vite@6.0.3(@types/node@20.17.9)(jiti@1.21.6)(terser@5.37.0)(tsx@4.19.2)(yaml@2.6.1)):
+  vite-plugin-dts@4.3.0(@types/node@20.17.9)(rollup@4.28.0)(typescript@5.3.3)(vite@6.0.3(@types/node@20.17.9)(jiti@1.21.6)(terser@5.37.0)(tsx@4.19.2)(yaml@2.6.1)):
     dependencies:
       '@microsoft/api-extractor': 7.48.0(@types/node@20.17.9)
       '@rollup/pluginutils': 5.1.3(rollup@4.28.0)
       '@volar/typescript': 2.4.10
-      '@vue/language-core': 2.1.6(typescript@5.5.4)
+      '@vue/language-core': 2.1.6(typescript@5.3.3)
       compare-versions: 6.1.1
       debug: 4.3.7
       kolorist: 1.8.0
       local-pkg: 0.5.1
       magic-string: 0.30.14
-      typescript: 5.5.4
+      typescript: 5.3.3
     optionalDependencies:
       vite: 6.0.3(@types/node@20.17.9)(jiti@1.21.6)(terser@5.37.0)(tsx@4.19.2)(yaml@2.6.1)
     transitivePeerDependencies:

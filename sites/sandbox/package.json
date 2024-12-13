@@ -29,7 +29,7 @@
     "@types/node": "^20",
     "@types/react": "npm:types-react@19.0.0-rc.1",
     "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
-    "typescript": "5.5.4"
+    "typescript": "5.3.3"
   },
   "pnpm": {
     "overrides": {
